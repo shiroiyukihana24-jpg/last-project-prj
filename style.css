@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #efd2ec;
+    --text-main: #7c2c8c;
+    --text-muted: #582362;
+    --accent-gradient: linear-gradient(to right, #FA5252, #DD2476);
+    --nav-bg: #d7b8e1;
+    --border-color: #E3E3E3;
+}
+
+body.dark-mode {
+    --bg-color: #4a233a;
+    --card-bg: #66a9b3;
+    --text-main: #f1ebef;
+    --text-muted: #a6a6a6;
+    --nav-bg: #8f4f77;
+    --border-color: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.profile-card,
+.content-card,
+.nav-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-weight: bolder;
+    color: #FA5252;
+}
+
+.profile-img-container img {
+    margin-top: -60px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-list {
+    background: var(--nav-bg);
+}
+
+.btn-download {
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    background: var(--nav-bg);
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    background: var(--accent-gradient);
+    color: white;
+}
+
+.btn-toggle {
+    background: var(--card-bg);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+body.dark-mode #sun-icon {
+    display: block;
+}
+
+body.dark-mode #moon-icon {
+    display: none;
+}
+
+body:not(.dark-mode) #sun-icon {
+    display: none;
+}
+
+body:not(.dark-mode) #moon-icon {
+    display: block;
+}
+
+.title-underline {
+    width: 80px;
+    height: 3px;
+    background: var(--accent-gradient);
+}
